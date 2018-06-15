@@ -1,14 +1,38 @@
 @charset "utf-8";
+@import "base.scss";
 
-h1{
-    color: tomato;
-    .test{
-        font-size: 2em;
-        &:after{
-            content: none;
-        }
+main {
+    position: relative;
+    // border: 1px solid #ccc;
+}
+
+.animationDraw {
+    border-top-right-radius: 30%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    // --- 
+    animation-name: test; //keyframesの名前と紐付いている
+    animation-duration: 5s; //かける時間
+    animation-iteration-count: infinite; // どれだけ繰り返すか
+    // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes test {
+    0% {
+        background-color: silver;
+        right: 0;
+        transform: rotate(0);
     }
-    .hoge{
-        margin: 10px;
+    95% {
+        background-color: tomato;
+        right: calc(100% - 300px);
+        transform: rotate(90deg);
+    }
+    100% {
+        background-color: silver;
+        right: 0;
+        transform: rotate(0);
     }
 }
