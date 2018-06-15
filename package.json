@@ -1,0 +1,17 @@
+{
+  "name": "css-animation-prac",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/neripark/css-animation-prac",
+  "author": "yoichi ezura",
+  "license": "MIT",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-webserver": "^0.9.1"
+  }
+}

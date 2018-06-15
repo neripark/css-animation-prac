@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+h1{
+    color: tomato;
+    .test{
+        font-size: 2em;
+        &:after{
+            content: none;
+        }
+    }
+    .hoge{
+        margin: 10px;
+    }
+}
