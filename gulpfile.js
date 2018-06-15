@@ -2,9 +2,12 @@ const path = require('path');
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const server = require('gulp-webserver');
+const plumber = require('gulp-plumber');
+
 
 gulp.task('sass', function(){
     gulp.src('./src/sass/style.scss')
+    .pipe(plumber())
     .pipe(sass({
         outputStyle: "compact"
     }))
